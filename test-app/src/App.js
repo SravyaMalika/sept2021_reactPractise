@@ -1,36 +1,63 @@
 import Greeting from './Greeting';
 import LineChartGraph from './LineChartGraph';
-import './App.css';
-import { makeStyles } from '@material-ui/core/styles';
+import NumberChart from './NumberChart';
 import SimpleCard from './Card';
-
-const useStyles = makeStyles({
-  root: {
-    minWidth: 275,
-  },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
-  },
-  title: {
-    fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
-  },
-});
+import { Container, Row, Col } from 'reactstrap';
+import AreaChartGraph from './AreaChartGraph';
+import ScatterChartGraph from './ScatterGraph';
+import DoughnutChart from './DoughnutChart';
 
 function App() {
   return (
-  //  <Greeting />
+    //  <Greeting />
     <div>
-      <SimpleCard>
-      <LineChartGraph/>
-      </SimpleCard>
+      <Container>
+        <Row className = 'App-row'>
+          <Col>
+            <SimpleCard>
+            <NumberChart value = {36}/>
+            </SimpleCard>
+          </Col>
+          <Col>
+            <SimpleCard>
+              <DoughnutChart />
+            </SimpleCard>
+          </Col>
+          <Col>
+            <SimpleCard>
+              <AreaChartGraph />
+            </SimpleCard>
+          </Col>
+        </Row>
+        <Row>
+          <Col sm={4}>
+            <Row>
+              <Col>
+                <SimpleCard>
+                <NumberChart value = {36}/>
+                </SimpleCard>
+              </Col>
+
+            </Row>
+            <Row>
+              <Col>
+                <SimpleCard>
+                  <ScatterChartGraph />
+                </SimpleCard>
+              </Col>
+
+            </Row>
+          </Col>
+          <Col sm={8}>
+            <SimpleCard>
+              <LineChartGraph />
+            </SimpleCard>
+          </Col>
+        </Row>
+      </Container>
      
     </div>
-  
+
 
   );
 }

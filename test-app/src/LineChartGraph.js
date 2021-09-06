@@ -43,8 +43,8 @@ return (
 				backgroundColor: "white" }}>
 
 		<LineChart
-		width={500}
-		height={300}
+		width={600}
+		height={530}
 		data={data}
 		margin={{
 			top: 5,
