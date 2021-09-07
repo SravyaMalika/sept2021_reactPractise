@@ -1,13 +1,14 @@
 
 import React from 'react';
 import {
-    Card, CardBody,Button
+    Card, CardBody,CardHeader
   } from 'reactstrap';
   
   const SimpleCard = (props) => {
     return (
       <div>
-        <Card>
+        <Card style={{width:"100%", height:"30%"}}>
+          <CardHeader style={{backgroundColor:"white", fontWeight:"500"}}>{props.title}</CardHeader>
           <CardBody>
             {props.children}
           </CardBody>

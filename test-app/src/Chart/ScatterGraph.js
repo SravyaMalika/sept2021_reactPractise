@@ -31,22 +31,19 @@ import {
 
 export default function ScatterChartGraph(){
     return (
-      
-       
-            
               <ScatterChart
-                width={350}
+                width={430}
                 height={250}
                 margin={{
-                  top: 20,
-                  right: 20,
-                  bottom: 20,
-                  left: 20,
+                  top: 10,
+                  right: 10,
+                  bottom: 10,
+                  left: 10,
                 }}
               >
-            
-                <XAxis type="number" dataKey="x" name="stature" unit="cm" />
-                <YAxis type="number" dataKey="y" name="weight" unit="kg" />
+                <CartesianGrid vertical={false} strokeDasharray="3"/>
+                <XAxis type="number" dataKey="x" name="stature" axisLine={false} tickLine={false} />
+                <YAxis type="number" dataKey="y" name="weight" axisLine={false} tickLine={false} />
                 <ZAxis type="number" dataKey="z" range={[60, 400]} name="score" unit="km" />
               
                 <Scatter name="A school" data={data01} fill="#8884d8" />
