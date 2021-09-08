@@ -40,3 +40,15 @@
     transform: rotate(360deg);
   }
 }
+.App-Sidebar{
+  background-color: #354456;
+  width: 5% !important;
+  
+}
+.App-ZeroPadding{
+  padding: 0px;
+}
+.App-PageContent{
+  width:95%  !important;;
+}
+

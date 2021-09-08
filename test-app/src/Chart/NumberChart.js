@@ -4,7 +4,8 @@
  const NumberChart =(props)=>{
     return(
        <div className='center'>
-           <strong>{props.value}</strong>
+           <div className="text">{props.value}</div>
+           <div className="helper-text">{props.percentValue}</div>
        </div> 
     )
 }

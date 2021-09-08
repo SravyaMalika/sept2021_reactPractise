@@ -1,6 +1,16 @@
 .center {
-    text-align: center;
+    
     height: 200px;
+  
+  }
+  .text{
+    text-align: center;
+    font-size: 500%;
+  }
+  .helper-text{
+    text-align: center;
+    font-size:250%;
+    color:#519384;
   }
 
  
