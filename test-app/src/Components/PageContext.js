@@ -8,6 +8,18 @@ import ScatterChartGraph from '../Chart/ScatterGraph';
 import DoughnutChart from '../Chart/DoughnutChart';
 
 const PageContext = () => {
+    const AreaTabs = [{type:"text",name:"Day"},
+                      {type:"text",name:"Month"},
+                      {type:"text",name:"Year"},
+                      {type:"text",name:"5Year"}
+                    ];
+    const DoughnutChartTabs = [{type:"icon",name:"List"},
+                              {type:"icon",name:"PieChart"}];
+
+    const ScatterChartTabs = [{type:"icon",name:"List"},
+                              {type:"icon",name:"ScatterChart"}]
+    
+
     return (
         <Container fluid={true}>
 
@@ -18,18 +30,18 @@ const PageContext = () => {
                     </SimpleCard>
                 </Col>
                 <Col xs={4} style={{ padding: "12px" }}>
-                    <SimpleCard title="Users">
+                    <SimpleCard title="Users" tabs={DoughnutChartTabs}>
                         <DoughnutChart />
                     </SimpleCard>
                 </Col>
                 <Col xs={4} style={{ padding: "12px" }}>
-                    <SimpleCard title="Region Share">
+                    <SimpleCard title="Region Share" tabs={AreaTabs}>
                         <AreaChartGraph />
                     </SimpleCard>
                 </Col>
             </Row>
             <Row >
-                <Col style={{ padding: "12px" }} style={{ padding: "12px" }} sm={4}>
+                <Col style={{ padding: "12px" }}  sm={4}>
                     <Row>
                         <Col>
                             <SimpleCard title="Revenue">
@@ -40,7 +52,7 @@ const PageContext = () => {
                     </Row>
                     <Row >
                         <Col style={{ padding: "12px" }}>
-                            <SimpleCard title="Products">
+                            <SimpleCard title="Products" tabs={ScatterChartTabs}>
                                 <ScatterChartGraph />
                             </SimpleCard>
                         </Col>
@@ -48,7 +60,7 @@ const PageContext = () => {
                     </Row>
                 </Col>
                 <Col style={{ padding: "12px" }} sm={8}>
-                    <SimpleCard title="Performance">
+                    <SimpleCard title="Performance" tabs={AreaTabs}>
                         <LineChartGraph />
                     </SimpleCard>
                 </Col>

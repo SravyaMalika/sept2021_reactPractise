@@ -4,6 +4,9 @@ import {
   } from 'reactstrap';
   import classnames from 'classnames';
   import { TabContent, TabPane, Nav, NavItem, NavLink, Button, CardText, Row, Col } from 'reactstrap';
+  import CradOptions from './CardOptions';
+  import './Card.css';
+  
   
   const SimpleCard = (props) => {
     const [activeTab, setActiveTab] = useState('1');
@@ -14,12 +17,11 @@ import {
   
     return (
       <div>
-        <Card style={{width:"100%", height:"30%"}}>
-          <CardHeader style={{backgroundColor:"white", fontWeight:"500"}}>
-            <div>{props.title}
-              <span style={{ float: "right" }}>
-              
-            </span>
+        <Card>
+          <CardHeader className="card-header-bgColor">
+            <div className="card-title">{props.title}</div>
+              <div className="card-options">
+              {props.tabs && props.tabs.length && <CradOptions tabs={props.tabs} />} 
             </div>
            
           </CardHeader>

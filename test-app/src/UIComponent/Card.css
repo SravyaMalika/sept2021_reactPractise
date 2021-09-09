@@ -1,0 +1,25 @@
+.card .card-header-bgColor{
+    background-color: #ffffff;
+    padding-bottom: 0px;
+
+}
+
+.card-title{
+    font-weight: 500;
+    float: left;
+}
+.card-options{
+    float: right;
+}
+
+
+.card-tabs{
+    padding-right: 8px;
+}
+
+.card-options .nav .active{
+    color: #000000;
+    font-weight: 600;
+    border-bottom: 3px solid #000000;
+    padding-bottom: 7px;
+}
