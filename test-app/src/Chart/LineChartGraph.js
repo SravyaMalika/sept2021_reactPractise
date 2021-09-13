@@ -4,7 +4,8 @@ import {
 	Line,
 	XAxis,
 	YAxis,
-	CartesianGrid
+	CartesianGrid,
+	ResponsiveContainer
 } from "recharts";
 
 const data = [
@@ -48,19 +49,14 @@ const data = [
 export default function LineChartGraph() {
 	return (
 		<div style={{
-			backgroundColor: "white"
+			backgroundColor: "white",
+			height:"100%"
 		}}>
-
+			<ResponsiveContainer width="100%" height="100%">
 			<LineChart
-				width={900}
-				height={530}
+				
 				data={data}
-				margin={{
-					top: 5,
-					right: 30,
-					left: 20,
-					bottom: 5,
-				}}
+				
 			>
 				<CartesianGrid vertical={false} strokeDasharray="3"/>
 
@@ -88,6 +84,9 @@ export default function LineChartGraph() {
 					
 			</LineChart>
 
+			</ResponsiveContainer>
+
+		
 		</div>
 	);
 }

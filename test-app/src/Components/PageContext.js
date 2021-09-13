@@ -6,6 +6,7 @@ import { Container, Row, Col } from 'reactstrap';
 import AreaChartGraph from '../Chart/AreaChartGraph';
 import ScatterChartGraph from '../Chart/ScatterGraph';
 import DoughnutChart from '../Chart/DoughnutChart';
+import './PageContext.css'
 
 const PageContext = () => {
     const AreaTabs = [{type:"text",name:"Day"},
@@ -18,49 +19,51 @@ const PageContext = () => {
 
     const ScatterChartTabs = [{type:"icon",name:"List"},
                               {type:"icon",name:"ScatterChart"}]
+
+    const DropDownItem = {name:"Last 30 Days",menuItems:["opt1","opt2"]}  
+    const DropDownItemBySource = {name:"By Source",menuItems:["opt1","opt2"]}              
     
 
     return (
         <Container fluid={true}>
-
             <Row xs="3" noGutters>
-                <Col xs={4} style={{ padding: "12px" }}>
-                    <SimpleCard title="New Users">
+                <Col xs={4} className='space-rows-col'>
+                    <SimpleCard title="New Users" dropDown={DropDownItem}>
                         <NumberChart value={"1434 023"} percentValue={"+2.3%"} />
                     </SimpleCard>
                 </Col>
-                <Col xs={4} style={{ padding: "12px" }}>
-                    <SimpleCard title="Users" tabs={DoughnutChartTabs}>
+                <Col xs={4} className='space-rows-col'>
+                    <SimpleCard title="Users" tabs={DoughnutChartTabs} dropDown={DropDownItemBySource}>
                         <DoughnutChart />
                     </SimpleCard>
                 </Col>
-                <Col xs={4} style={{ padding: "12px" }}>
+                <Col xs={4} className='space-rows-col'>
                     <SimpleCard title="Region Share" tabs={AreaTabs}>
                         <AreaChartGraph />
                     </SimpleCard>
                 </Col>
             </Row>
             <Row >
-                <Col style={{ padding: "12px" }}  sm={4}>
+                <Col   sm={4}>
                     <Row>
-                        <Col>
-                            <SimpleCard title="Revenue">
+                        <Col className='space-rows-col'>
+                            <SimpleCard title="Revenue" dropDown={DropDownItem}>
                                 <NumberChart value={"231.4M"} percentValue={"+6.3%"} />
                             </SimpleCard>
                         </Col>
 
                     </Row>
                     <Row >
-                        <Col style={{ padding: "12px" }}>
-                            <SimpleCard title="Products" tabs={ScatterChartTabs}>
+                        <Col className='space-rows-col'>
+                            <SimpleCard title="Products" tabs={ScatterChartTabs} dropDown={DropDownItemBySource}>
                                 <ScatterChartGraph />
                             </SimpleCard>
                         </Col>
 
                     </Row>
                 </Col>
-                <Col style={{ padding: "12px" }} sm={8}>
-                    <SimpleCard title="Performance" tabs={AreaTabs}>
+                <Col className='space-rows-col' sm={8}>
+                    <SimpleCard title="Performance" tabs={AreaTabs} height={'500px'}>
                         <LineChartGraph />
                     </SimpleCard>
                 </Col>

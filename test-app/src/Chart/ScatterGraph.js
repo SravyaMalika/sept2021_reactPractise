@@ -6,9 +6,7 @@ import {
     YAxis,
     ZAxis,
     CartesianGrid,
-    Tooltip,
-    Legend,
-    ResponsiveContainer,
+    ResponsiveContainer
   } from 'recharts';
 
   const data01 = [
@@ -31,16 +29,8 @@ import {
 
 export default function ScatterChartGraph(){
     return (
-              <ScatterChart
-                width={430}
-                height={250}
-                margin={{
-                  top: 10,
-                  right: 10,
-                  bottom: 10,
-                  left: 10,
-                }}
-              >
+      <ResponsiveContainer width="100%" height="100%">
+              <ScatterChart >
                 <CartesianGrid vertical={false} strokeDasharray="3"/>
                 <XAxis type="number" dataKey="x" name="stature" axisLine={false} tickLine={false} />
                 <YAxis type="number" dataKey="y" name="weight" axisLine={false} tickLine={false} />
@@ -49,6 +39,7 @@ export default function ScatterChartGraph(){
                 <Scatter name="A school" data={data01} fill="#8884d8" />
                 <Scatter name="B school" data={data02} fill="#82ca9d" />
               </ScatterChart>
+              </ResponsiveContainer>
            
           );
       

@@ -46,7 +46,7 @@
   
 }
 .App-ZeroPadding{
-  padding: 0px;
+  padding: 0px !important;
 }
 .App-PageContent{
   width:95%  !important;;

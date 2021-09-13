@@ -14,7 +14,12 @@
 
 
 .card-tabs{
-    padding-right: 8px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.card-tab-icon{
+    font-size: 16px;
 }
 
 .card-options .nav .active{

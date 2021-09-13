@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import {
     Card, CardBody,CardHeader
   } from 'reactstrap';
-  import classnames from 'classnames';
-  import { TabContent, TabPane, Nav, NavItem, NavLink, Button, CardText, Row, Col } from 'reactstrap';
   import CradOptions from './CardOptions';
   import './Card.css';
   
@@ -14,14 +12,16 @@ import {
     const toggle = tab => {
       if(activeTab !== tab) setActiveTab(tab);
     }
+
+    let height = props.height ? props.height : "250px";
   
     return (
       <div>
-        <Card>
+        <Card style={{height:height}}>
           <CardHeader className="card-header-bgColor">
             <div className="card-title">{props.title}</div>
               <div className="card-options">
-              {props.tabs && props.tabs.length && <CradOptions tabs={props.tabs} />} 
+              {((props.tabs && props.tabs.length ) || (props.dropDown)) && <CradOptions tabs={props.tabs} dropDown={props.dropDown}/>} 
             </div>
            
           </CardHeader>
