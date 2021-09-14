@@ -7,11 +7,7 @@ import {
   
   
   const SimpleCard = (props) => {
-    const [activeTab, setActiveTab] = useState('1');
-
-    const toggle = tab => {
-      if(activeTab !== tab) setActiveTab(tab);
-    }
+   
 
     let height = props.height ? props.height : "250px";
   

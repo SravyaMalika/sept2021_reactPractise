@@ -12,3 +12,13 @@ test('render  card',() => {
     expect(title).toBeInTheDocument();
 
 })
+
+test('render  card with height',() => {
+
+    const {container} = render(<Card height={"200px"}>hello</Card>);
+
+    
+    expect(container.querySelector('.card').style.height).toMatch("200px");
+
+
+})
