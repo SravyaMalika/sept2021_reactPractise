@@ -1,7 +1,7 @@
 
 import { Container, Row, Col } from 'reactstrap';
 import Header from './Components/Header';
-import Sidebar from './Components/Siedbar';
+import Sidebar from './Components/Sidebar';
 import './App.css';
 import PageContext from './Components/PageContext';
 
